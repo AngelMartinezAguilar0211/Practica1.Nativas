@@ -69,8 +69,10 @@ La navegación principal dentro del juego sigue la siguiente estructura:
 
 ```
 MainActivity → GameplayActivity → [BuildingNumber2, Cafeteria, etc.]
-                                      ↓
-                                 [Salon2009, Salon2010, etc.]
+                  ↓                    ↓
+                [Zacatenco]                 [Salon2009, Salon2010, etc.]
+                  ↓
+                [Lindavista]
 ```  
 
 ## Sistema de Mapas  
@@ -84,6 +86,13 @@ Cada edificio o área dentro del juego (GameplayActivity, BuildingNumber2, Salon
 ## Servidor y Sincronización  
 
 Para garantizar la sincronización en tiempo real de la ubicación de los jugadores, el sistema se comunica con un servidor WebSocket, el cual está desarrollado en Node.js y Express.  
+
+## Instrucciones de uso 
+Al igual que el programa original, inicialmente se debe ingresar con un nombre de usuario a la aplicación.
+Después de iniciar sesión el jugador aparecerá como un punto en el mapa y podrá moverse con los botones visibles a la izquierda en las direcciones cardinales. Los elementos con los que se puede interactuar se encuentran marcados con un ligero tono azul, igualmente cuando te encuentres en un punto en el cual se puede interactuar se mostrará un mensaje en la parte inferior de la pantalla.
+Para interactuar con cualquier punto se deberá presionar el botón A estando sobre el punto con el cual se quiere interactuar. Y en caso de que no sea posible se avisará por medio de un mensaje.
+Los mapas consisten en una cuadricula en la cual se avanza punto por punto hasta llegar al destino
+Puntos de interés en la aplicación pueden abrir una aplicación distinta (Google, Maps) la cual no va a cerrar la aplicación, por lo que se podrá volver siempre al mapa original.
 
 
 
